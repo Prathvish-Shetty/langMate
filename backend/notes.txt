@@ -1,0 +1,34 @@
+npm i bcryptjs cookie-parser cors dotenv express jsonwebtoken mongoose stream-chat
+npm install nodemon -D
+
+import dotenv from "dotenv"
+dotenv.config()
+or
+import "dotenv/config"
+
+.js is required while importing when using modulejs
+
+random avatars : https://avatar-placeholder.iran.liara.run
+
+openssl rand -base64 32 : generate random hash of 32 length
+
+post method is for operations that change the server state logout does that, hence use post for logout
+
+i used app.use(cookieParser) instead of app.use(cookieParser()) due to this, the requests were not sent forward as 
+this function was not executed and the next() function was not called
+
+got to getstream, chat messaging, explorer to see the users 
+
+express 5 
+*splat matches any path without the root path. 
+If you need to match the root path as well /, you can use /{*splat}, wrapping the wildcard in braces.
+
+app.use(express.static(path.join(__dirname, "../frontend/dist")): This tells your Express server to serve static files (like HTML, CSS, JavaScript, images) directly from the frontend/dist folder. It's how your web browser gets the actual files that make up your website's interface.
+
+app.get("/{*splat}", ...): This is a catch-all route for your Single Page Application (SPA). 
+If a user requests any URL that isn't an API endpoint or a specific static file, this line ensures that the server always sends back your index.html file. 
+This allows your frontend JavaScript (e.g., React Router) to then handle the specific URL and render the correct page on the client side.
+
+we dont need to specify NODE_ENV in .env as render know that this is the production environment and set it itself
+
+add all env variables frontend and backend in render while deploying

@@ -1,0 +1,67 @@
+npm create vite@latest .
+npm i
+npm install tailwindcss @tailwindcss/vite
+npm i -D daisyui@latest
+npm i react-router react-hot-toast @tanstack/react-query axios lucide-react zustand
+npm i stream-chat stream-chat-react
+
+react-router-dom is now react-router (latest)
+react query or tanstack query
+
+traditional way of fetching data
+const [data, setData] = useState([])
+const [isLoading, setIsLoading] = useState(false)
+const [error, setError] = useState(null)
+
+useEffect(() => {
+  const getData = async () => {
+    setIsLoading(true)
+    try {
+      const data = await fetch("https://jsonplaceholder.typicode.com/todos")
+      const json = await data.json()
+      setData(json)
+    } catch (error) {
+      setError(error)
+    } finally(){
+      setIsLoading(false)
+    }
+  }
+  getData()
+}, [])
+
+console.log(data)
+
+here we are using tanstack query, use useQuery for get requests
+const {data, isLoading, error} = useQuery({
+  queryKey: ["todos"],
+  queryFn: async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const data = await res.json();
+    return data;
+  },
+  retry: false
+})
+console.log({data})
+console.log({isLoading})
+console.log({error})
+
+use storyset.com for free illustrations
+
+color : 90CAF9
+
+https://flagpedia.net/download/api : for country flags
+
+while development
+frontend : localhost:5175
+backend : localhost:5001
+
+while deployment
+build frontend code and generate html and css
+deploy these files statically in backend as static asset
+to do this
+create a package.json in root and add build script in that 
+run build command in root
+dist folder is created in frontend which has optimised version of code 
+
+random avatar src1 : https://avatar.iran.liara.run/public/${idx}.png`
+random avatar src2 https://i.pravatar.cc/150?img=
