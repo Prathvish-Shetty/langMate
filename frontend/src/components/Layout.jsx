@@ -1,9 +1,11 @@
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
+import { useThemeStore } from "../store/useThemeStore";
 
 const Layout = ({ children, showSidebar = false }) => {
+  const { theme } = useThemeStore()
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" data-theme={theme}>
       <div className="flex">
         {showSidebar && <Sidebar />}
 
