@@ -14,13 +14,13 @@ Whether you're a beginner or fluent speaker, LangMate provides a social way to i
 * 💬 **Real-time Chat** with:
 
   * Typing indicators & emoji reactions
-  * Group & private conversations
+  * private conversations
   * Clean, responsive chat UI
 
 * 📹 **Video Calls**
 
   * Screen sharing & call recording
-  * Smooth experience using Stream/WebRTC
+  * Smooth experience 
 
 * 🎨 **32 UI Themes**
   Personalize your interface with beautiful themes
@@ -35,9 +35,10 @@ Whether you're a beginner or fluent speaker, LangMate provides a social way to i
 
 * ⚙️ **Tech Stack**
 
-  * **Frontend:** React.js, Tailwind CSS, TanStack Query, DaisyUI
+  * **Frontend:** React.js, Tailwind CSS, TanStack Query, [DaisyUI](https://daisyui.com)
   * **Backend:** Node.js, Express.js, MongoDB, Mongoose
-  * **Real-time:** Stream API for chat and video call features 
+  * **Real-time:** [Stream API](https://getstream.io)
+ for chat and video call features 
 
 
 ---
